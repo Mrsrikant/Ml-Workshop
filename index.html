@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Quality Predictor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Wine Quality Predictor</h1>
+        <p>Enter the wine characteristics to predict its quality.</p>
+        
+        <!-- Image Tag Added Here -->
+        <img src="wine1.jpg" alt="Wine Bottle" style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 1rem;"> <!-- Replace with your image path -->
+
+        <form id="prediction-form">
+            <div class="form-group">
+                <label for="fixed-acidity">Fixed Acidity:</label>
+                <input type="number" id="fixed-acidity" name="fixed-acidity" step="0.1" required>
+            </div>
+            <div class="form-group">
+                <label for="volatile-acidity">Volatile Acidity:</label>
+                <input type="number" id="volatile-acidity" name="volatile-acidity" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="citric-acid">Citric Acid:</label>
+                <input type="number" id="citric-acid" name="citric-acid" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="residual-sugar">Residual Sugar:</label>
+                <input type="number" id="residual-sugar" name="residual-sugar" step="0.1" required>
+            </div>
+            <div class="form-group">
+                <label for="chlorides">Chlorides:</label>
+                <input type="number" id="chlorides" name="chlorides" step="0.001" required>
+            </div>
+            <div class="form-group">
+                <label for="free-sulfur-dioxide">Free Sulfur Dioxide:</label>
+                <input type="number" id="free-sulfur-dioxide" name="free-sulfur-dioxide" required>
+            </div>
+            <div class="form-group">
+                <label for="total-sulfur-dioxide">Total Sulfur Dioxide:</label>
+                <input type="number" id="total-sulfur-dioxide" name="total-sulfur-dioxide" required>
+            </div>
+            <div class="form-group">
+                <label for="density">Density:</label>
+                <input type="number" id="density" name="density" step="0.0001" required>
+            </div>
+            <div class="form-group">
+                <label for="ph">pH:</label>
+                <input type="number" id="ph" name="ph" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="sulphates">Sulphates:</label>
+                <input type="number" id="sulphates" name="sulphates" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="alcohol">Alcohol:</label>
+                <input type="number" id="alcohol" name="alcohol" step="0.1" required>
+            </div>
+            <button type="submit">Predict Quality</button>
+        </form>
+        <div id="result" class="result-container" style="display: none;">
+            <h2>Prediction Result</h2>
+            <p>Predicted Quality: <span id="predicted-quality"></span></p>
+            <p>Confidence: <span id="confidence"></span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
